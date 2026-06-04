@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.animate-alert-border {
+  animation: alert-border-pulse 1.5s ease-in-out infinite;
+}
+
+.animate-alert-border-light {
+  animation: alert-border-pulse-light 1.5s ease-in-out infinite;
+}
+
+@keyframes alert-border-pulse {
+  0%, 100% {
+    border-color: rgba(255, 69, 0, 0.8);
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 69, 0, 0.1);
+    box-shadow: 0 0 0px rgba(255, 69, 0, 0);
+  }
+}
+
+@keyframes alert-border-pulse-light {
+  0%, 100% {
+    border-color: rgba(255, 69, 0, 0.5);
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.15);
+  }
+  50% {
+    border-color: rgba(255, 69, 0, 0.1);
+    box-shadow: 0 0 0px rgba(255, 69, 0, 0);
+  }
+}
