@@ -1,0 +1,6 @@
+{
+  "name": "Flet Luxury Agenda",
+  "description": "Interactive simulator and code exporter for a high-end luxury terminal-style Python Flet desktop agenda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
