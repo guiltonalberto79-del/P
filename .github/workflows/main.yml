@@ -1,0 +1,20 @@
+name: Build Desktop App
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npm run build
+      - run: npm install electron electron-builder cross-env --save-dev
+      - run: npx electron-builder -w
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Agenda-Pessoal-App
+          path: release/*.exe
